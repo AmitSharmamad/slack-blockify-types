@@ -1,0 +1,35 @@
+{
+    "name": "slack-blockify-types",
+    "version": "1.0.0",
+    "description": "Type support for composing Slack Block Kit Messages",
+    "types": "index.ts",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AmitSharmamad/slack-blockify-types.git"
+    },
+    "keywords": [
+        "slack-block-kit",
+        "slack-blockify",
+        "slack-interactive-messages",
+        "typescript"
+    ],
+    "author": "Amit Madgula",
+    "contributors": [
+        {
+            "email": "amitsharmamad@gmail.com",
+            "name": "amit madgula"
+        }
+    ],
+    "maintainers": [
+        {
+            "name": "amit madgula",
+            "email": "amitsharmamad@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/AmitSharmamad/slack-blockify-types/issues"
+    },
+    "homepage": "https://github.com/AmitSharmamad/slack-blockify-types#readme"
+}
