@@ -16,11 +16,11 @@ import {
 
 import { Text, WithMrkdwn, Plain } from "./composition-objects";
 
-export interface Block {
+interface BlockProps {
     block_id?: string;
 }
 
-export interface Actions extends Block {
+export interface Actions extends BlockProps {
     type: "actions";
     elements: (
         | ButtonElement
@@ -30,29 +30,29 @@ export interface Actions extends Block {
     )[];
 }
 
-export interface Context extends Block {
+export interface Context extends BlockProps {
     type: "context";
     elements: (ImageElement | Text<WithMrkdwn>)[];
 }
 
-export interface Divider extends Block {
+export interface Divider extends BlockProps {
     type: "divider";
 }
 
-export interface File extends Block {
+export interface File extends BlockProps {
     type: "file";
     external_id: string;
     source: "remote";
 }
 
-export interface Image extends Block {
+export interface Image extends BlockProps {
     type: "image";
     image_url: string;
     alt_text: string;
     title: Text<Plain>;
 }
 
-export interface Input extends Block {
+export interface Input extends BlockProps {
     type: "input";
     label: Text<Plain>;
     element:
@@ -64,9 +64,18 @@ export interface Input extends Block {
     optional?: boolean;
 }
 
-export interface Section extends Block {
+export interface Section extends BlockProps {
     type: "section";
     text?: Text<WithMrkdwn>;
     fields?: Text<WithMrkdwn>[];
     accessory?: Elements;
 }
+
+export type Block =
+    | Actions
+    | Context
+    | Divider
+    | File
+    | Image
+    | Input
+    | Section;

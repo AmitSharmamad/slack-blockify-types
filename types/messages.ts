@@ -3,18 +3,18 @@
  * https://api.slack.com/reference/block-kit/blocks
  */
 
-import { Actions, Context, Divider, File, Image, Section } from "./blocks";
+import { Block } from "./blocks";
 import {
     ButtonElement,
     SelectMenus,
     MultiSelectMenus,
     OverflowElement,
-    DatepickerElement
+    DatepickerElement,
 } from "./block-elements";
 import { Text, Plain } from "./composition-objects";
 
 export interface Message {
-    blocks: (Actions | Context | Divider | File | Image | Section)[];
+    blocks: Block[];
 }
 
 export type MessageActions = (
