@@ -1,6 +1,6 @@
 {
     "name": "slack-blockify-types",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Type support for composing Slack Block Kit Messages",
     "types": "index.ts",
     "scripts": {},
